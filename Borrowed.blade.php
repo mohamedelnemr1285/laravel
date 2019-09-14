@@ -3,18 +3,14 @@
 
 
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 center">
 
-                {{--{!! form::model($update,array('method' =>'PATCH', 'action'=>['updatecontroller@update',$update->id],'files=>true')) !!}--}}
-                @foreach ($students as  $student)
 
-                <form action="/borrow/{{$student->id}}" method="POST" role="form" >
+
+
+                <form action="/borrow/{{$students->id}}" method="POST" role="form" >
 
                 {{method_field('PATCH')}}
                 {{csrf_field()}}
-                    @endforeach
                     <legend>Borrow A book</legend>
 
                     <div class="form-group">
@@ -23,7 +19,7 @@
                         <select name="username">
                             @foreach ($students as  $student)
 
-                            <option value="{{$student->id}}">{{ucwords( $student->name)}}</option>
+                            <option value="$students->id">{{ucwords( $students->name)}}</option>
                             @endforeach
 
                         </select>

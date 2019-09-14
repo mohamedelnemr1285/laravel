@@ -74,8 +74,8 @@ class borrowcontroller extends Controller
 
     }
 
-    public function edit (students $students){
-        $students = student::all();
+    public function edit ($id){
+       $students = student::find($id);
         return view('library.Borrowed',compact('students'));
     }
 
