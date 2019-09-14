@@ -19,7 +19,7 @@
                         <select name="username">
                             @foreach ($students as  $student)
 
-                            <option value="$students->id">{{ucwords( $students->name)}}</option>
+                            <option value="{{$student->id}}">{{ucwords( $student->name)}}</option>
                             @endforeach
 
                         </select>
